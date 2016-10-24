@@ -1,5 +1,6 @@
 package com.example.user.yvd102402;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("MYLOG", "onClick");
+                Intent it = new Intent(MainActivity.this, Main2Activity.class);
+                startActivity(it);
             }
         });
     }

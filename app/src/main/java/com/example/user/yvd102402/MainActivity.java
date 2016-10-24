@@ -13,16 +13,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn2 = (Button) findViewById(R.id.button2);
-        MyListener listener = new MyListener();
-        btn2.setOnClickListener(listener);
-    }
 
-    class MyListener implements View.OnClickListener
-    {
-        @Override
-        public void onClick(View v) {
-            Log.d("MYLOG", "onClick");
-        }
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("MYLOG", "onClick");
+            }
+        });
     }
 
     public void click1(View v)
